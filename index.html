@@ -5,20 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tigo</title>
   <style>
-    /* Contenedor del recuadro */
-    .recuadro {
-      max-width: 500px;   /* tamaño máximo */
-      margin: auto;       /* centrado */
-      border-radius: 10px;
-      padding: 10px;
-      
+    body {
+      margin: 0;
+      padding: 0;
     }
 
-    /* Imagen responsive */
+    /* Recuadro ocupa toda la pantalla */
+    .recuadro {
+      width: 100vw;     /* 100% ancho de la ventana */
+      height: 100vh;    /* 100% alto de la ventana */
+      overflow: hidden; /* evita scroll si la imagen es más grande */
+    }
+
+    /* Imagen ocupa toda la pantalla */
     .recuadro img {
-      width: 100%;    /* se ajusta al ancho del recuadro */
-      height: auto;   /* mantiene la proporción */
-      border-radius: 8px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* cubre todo sin deformarse */
       display: block;
     }
   </style>
